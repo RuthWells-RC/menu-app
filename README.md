@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+Menu App – Final PoE
+Project Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React + TypeScript restaurant menu app. It has two main pages:
 
-## Available Scripts
+Home Page – Displays the full menu, lets guests filter by course, and shows a dashboard with total items, average price, and total revenue per course.
 
-In the project directory, you can run:
+Manage Menu Page – Allows the chef to add and remove menu items. Changes are reflected in real-time on the Home page.
 
-### `npm start`
+Features
+Home Page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Displays all menu items in a list.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Filter items by course: Starter, Main, Dessert, or All.
 
-### `npm test`
+Dashboard shows:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Total menu items
 
-### `npm run build`
+Average price per course
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Total revenue per course
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Manage Menu Page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Add new menu items with Name, Course, Description, and Price.
 
-### `npm run eject`
+Remove existing menu items.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Changes update the Home page immediately.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Components
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Home.tsx – Dashboard + filter + menu display
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+ManageMenu.tsx – Add/Remove menu items
 
-## Learn More
+MenuItemForm.tsx – Form for adding new items
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+MenuList.tsx – Reusable component to display menu items
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+types.ts – Type definition for menu items
+
+Changelog
+Part 3 – Final PoE Changes
+
+Moved Add/Remove menu feature to a separate screen (ManageMenu)
+
+Home page is read-only, displays full menu
+
+Added filter by course on Home page
+
+Added Remove button for chef on Manage Menu page
+
+Dashboard added to Home page (total items, avg price, total revenue)
+
+Refactored code:
+
+Created MenuList component
+
+Created MenuItemForm component
+
+Improved folder structure and code organization
